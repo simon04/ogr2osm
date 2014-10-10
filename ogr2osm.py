@@ -211,7 +211,9 @@ if options.translationMethod:
         parser.error("Could not load translation method '%s'. Translation "
                "script must be in your current directory, or in the "
                "translations/ subdirectory of your current or ogr2osm.py "
-               "directory. The following directories have been considered: %s"
+               "directory. The following directories have been considered: %s."
+               "Note that the filename (except the extension) must not contain "
+               "a period to avoid problems!"
                % (options.translationMethod, str(sys.path)))
     except SyntaxError as e:
         parser.error("Syntax error in '%s'. Translation script is malformed:\n%s"

@@ -36,7 +36,8 @@ ogr2osm will read any data source that ogr can read and handle reprojection for
 you. It takes a python file to translate external data source tags into OSM 
 tags, allowing you to use complicated logic. If no translation is specified it 
 will use an identity translation, carrying all tags from the source to the .osm 
-output. 
+output. Note that the filename (except the extension) must not contain a period
+(`.`) to avoid problems.
 
 Import Cautions
 ---------------
